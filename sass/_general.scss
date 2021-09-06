@@ -1,0 +1,36 @@
+body {
+  font-family: $textFont;
+  font-size: 14px;
+  line-height: 1.714;
+  color: $primaryTextColor;
+  background-color: $secondaryColor;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+.advantages__invisible {
+  display: none;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: $secondaryColor;
+}

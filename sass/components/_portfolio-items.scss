@@ -1,0 +1,92 @@
+/* Portfolio */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
+.options__item {
+  list-style: none;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  flex-basis: calc(100% / 3 - 30px);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.options__link {
+  text-decoration: none;
+}
+.options__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.option-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $mainColor;
+}
+.option-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+}
+
+.option-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.option-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.options__item:hover .option-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+.option-text {
+  color: $primaryTextColor;
+}
+.options-description-wrapper {
+  padding: 20px 24px;
+}
+.option-description-text {
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  padding: 63px 24px;
+  color: $secondaryColor;
+}
+
+.option-detailed-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.options__item:hover .option-detailed-description {
+  opacity: 1;
+}
+.work {
+  list-style: none;
+}

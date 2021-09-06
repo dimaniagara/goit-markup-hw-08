@@ -1,0 +1,40 @@
+/*Clients */
+.team__social-contacts,
+.clients__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.clients__item {
+  display: flex;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.clients__link {
+  align-items: center;
+  justify-content: center;
+  color: $primaryTextColor;
+  padding: 16px 32px 16px 32px;
+  display: block;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: $accentColor;
+    border-color: $accentColor;
+  }
+}
+.clients__logo {
+  fill: $logoColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .clients__link:hover & {
+    fill: currentColor;
+  }
+}

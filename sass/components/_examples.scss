@@ -1,0 +1,43 @@
+/*Examples */
+.examples__title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.166;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $mainColor;
+}
+.examples__title,
+.team__header {
+  margin-bottom: 30px;
+}
+.examples__item {
+  position: relative;
+  list-style: none;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.examples__list {
+  display: flex;
+  justify-content: center;
+}
+.examples__description {
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  width: 100%;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.examples__description-text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $secondaryColor;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
