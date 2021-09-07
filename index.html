@@ -25,6 +25,15 @@
     <!--Header-->
     <header class="page-header">
       <div class="container page-header__container">
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-toggle__open-icon" width="40px" height="40px">
+            <use href="./images/svg-sprite.svg#icon-menu-open"></use>
+          </svg>
+        </button>
         <nav class="page-header__nav">
           <a href="./index.html" class="page-header__logo"
             ><span class="page-header__logo--accent-color">Web</span>Studio</a
@@ -45,7 +54,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="contacts list info-list">
+        <ul class="contacts info-list">
           <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link">
               <svg class="contacts__icon" width="16px" height="12px">
@@ -256,9 +265,10 @@
           <ul class="team__name">
             <li class="team__member">
               <img
+                class="team__image"
+                srcset="./images/pic4.jpg 1x, ./images/pic4@2x.jpg 2x"
                 src="./images/pic4.jpg"
                 alt="Дизайнер продукта"
-                width="270"
               />
               <div class="team__description">
                 <h3 class="team__title">Игорь Демьяненко</h3>
@@ -299,9 +309,10 @@
             </li>
             <li class="team__member">
               <img
+                class="team__image"
+                srcset="./images/pic5.jpg 1x, ./images/pic5@2x.jpg 2x"
                 src="./images/pic5.jpg"
                 alt="Фронт енд разработчик"
-                width="270"
               />
               <div class="team__description">
                 <h3 class="team__title">Ольга Репина</h3>
@@ -341,7 +352,12 @@
               </div>
             </li>
             <li class="team__member">
-              <img src="./images/pic6.jpg" alt="Маркетолог" width="270" />
+              <img
+                class="team__image"
+                srcset="./images/pic6.jpg 1x, ./images/pic6@2x.jpg 2x"
+                src="./images/pic6.jpg"
+                alt="Маркетолог"
+              />
               <div class="team__description">
                 <h3 class="team__title">Николай Тарасов</h3>
                 <p class="team__text">Marketing</p>
@@ -381,9 +397,10 @@
             </li>
             <li class="team__member">
               <img
+                class="team__image"
+                srcset="./images/pic7.jpg 1x, ./images/pic7@2x.jpg 2x"
                 src="./images/pic7.jpg"
                 alt="Дизайнер пользовательских интерфейсов"
-                width="270"
               />
               <div class="team__description">
                 <h3 class="team__title">Михаил Ермаков</h3>
@@ -568,6 +585,37 @@
         </ul>
       </div>
     </footer>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li><a href="./index.html" class="link">Студия</a></li>
+        <li><a href="./portfolio.html" class="link">Портфолио</a></li>
+        <li><a href="/" class="link">Контакты</a></li>
+      </ul>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

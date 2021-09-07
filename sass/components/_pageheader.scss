@@ -12,7 +12,38 @@
   letter-spacing: 0.03em;
   color: $mainColor;
 }
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.site-nav,
+.contacts {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
 /* Main Navigation */
 .page-header__container,
 .page-header__nav {
@@ -25,10 +56,13 @@
 .nav-contacts {
   margin-left: 93px;
 }
-.site-nav {
-  align-items: center;
-  display: flex;
-  margin-left: 93px;
+.site-nav,
+.contacts {
+  @media screen and (min-width: 768px) {
+    align-items: center;
+    display: flex;
+    margin-left: 93px;
+  }
 }
 .site-nav__item:not(:last-child) {
   margin-right: 50px;

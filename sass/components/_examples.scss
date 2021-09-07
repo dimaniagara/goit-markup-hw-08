@@ -1,5 +1,10 @@
 /*Examples */
-.examples__title {
+.examples {
+  @media screen and (min-width: 480px) {
+    display: none;
+  }
+}
+/*.examples__title {
   font-weight: bold;
   font-size: 36px;
   line-height: 1.166;
@@ -40,4 +45,4 @@
   color: $secondaryColor;
   padding-top: 27px;
   padding-bottom: 27px;
-}
+}*/
